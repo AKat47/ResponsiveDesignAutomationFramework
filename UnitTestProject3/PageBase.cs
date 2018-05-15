@@ -1,5 +1,5 @@
 ﻿using Builder.DriverManager;
-using Harness.ReadSettings;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,16 +34,16 @@ namespace Entities
 
             List<Uri> result = new List<Uri>();
 
-            PartialUrls.ForEach(e => result.Add(new Uri(string.Format(e.ToString(), Configurations.url))));
+            PartialUrls.ForEach(e => result.Add(new Uri(string.Format(e.ToString(), Harness.ReadSettings.Configurations.url))));
 
             return result;
         }
 
-        //public bool IsTextDisplayed(string text)
-        //{
-        //    //var element = DriverManager.Instance.FindElement(By.XPath("//body"));
-        //    //return element.Text.Contains(text);
-        //}
+        public bool IsTextDisplayed(string text)
+        {
+           var element = DriverManager.Instance.FindElement(By.XPath("//body"));
+           return element.Text.Contains(text);
+        }
 
 
     }

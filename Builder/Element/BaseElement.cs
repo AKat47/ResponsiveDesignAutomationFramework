@@ -50,6 +50,28 @@ namespace Builder
             }
         }
 
+        public string Text
+        {
+            get
+            {
+                return string.IsNullOrEmpty(_wrappedElement.Text)? "" : _wrappedElement.Text ;
+            }
+        }
+
+        public bool Displayed
+        {
+            get
+            {
+                try
+                {
+                    return _wrappedElement.Displayed;
+                }
+                catch(Exception)
+                {
+                    return false;
+                }
+            }
+        }
 
     }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Builder.Driver;
 using OpenQA.Selenium;
@@ -54,7 +55,7 @@ namespace Builder
         {
             for(int i=0;i<10;i++)
             {
-                if(JsExecutor.ExecuteScript("return document.readyState").ToString().Equals("complete"))
+                if(JsExecutor().ExecuteScript("return document.readyState").ToString().Equals("complete"))
                 {
                     return;
                 }
@@ -70,7 +71,7 @@ namespace Builder
             {
                 for (int i = 0; i < 25; i++)
                 {
-                    if ((bool)JsExecutor.ExecuteScript("return jQuery.active == 0;")) return;
+                    if ((bool)JsExecutor().ExecuteScript("return jQuery.active == 0;")) return;
 
                     Thread.Sleep(1000);
                 }
@@ -116,13 +117,10 @@ namespace Builder
             }
         }
 
-        public IJavaScriptExecutor JsExecutor
+        public IJavaScriptExecutor JsExecutor()
         {
-            get
-            {
                 IJavaScriptExecutor js = (IJavaScriptExecutor)NativeDriver;
-                return js;
-            }
+                return js;            
         }
 
         public WebElement FindElement(By elementLocator)
@@ -151,6 +149,45 @@ namespace Builder
             }
             else
                 throw new Exception(string.Format("Element not found : {0}", elementLocator));
+        }
+
+        protected IList<WebElement> GetCustomElements(By locator) 
+        {
+            List<WebElement> result = new List<WebElement>();
+
+            NativeDriver.FindElements(locator).ToList().ForEach(e => result.Add(new WebElement(this, locator)));
+
+            return result;
+        }
+
+        public IList<WebElement> FindElements(IEnumerable<By> locatorList) 
+        {
+            WaitForPageLoad();
+
+            List<WebElement> result = new List<WebElement>();
+
+            locatorList.ToList().ForEach(e => result.AddRange(GetCustomElements(e)));
+
+            return result;
+        }
+
+        public WebElement FindElement(By primaryLocator, IList<By> secondaryLocatorList) 
+        {
+            List<By> locators = new List<By>();
+
+            if (primaryLocator != null) locators.Add(primaryLocator);
+
+            if (secondaryLocatorList != null) locators.AddRange(secondaryLocatorList);
+
+            try
+            {
+                var element = FindElements(locators).FirstOrDefault(e => e.Displayed);
+
+                if (element != null) return element;
+            }
+            catch (Exception) { }
+
+            return (new WebElement(this, primaryLocator));
         }
     }
 }

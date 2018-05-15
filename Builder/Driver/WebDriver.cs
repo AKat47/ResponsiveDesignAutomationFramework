@@ -23,9 +23,13 @@ namespace Builder.Driver
 
         WebElement FindElement(By elementLocator);
 
+        WebElement FindElement(By primaryLocator, IList<By> secondaryLocatorList);
+
         IList<WebElement> FindElements(By elementLocator);
 
         void WaitForPageLoad();
+
+        IJavaScriptExecutor JsExecutor();
     }
 
 }

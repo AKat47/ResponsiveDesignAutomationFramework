@@ -102,7 +102,7 @@ namespace Builder.DriverManager
                 else if (tabletList.Any(e => e.Equals(Configurations.deviceName, StringComparison.InvariantCultureIgnoreCase)))
                     return DeviceMode.Tablet;
                 else if (mobileList.Any(e => e.Equals(Configurations.deviceName, StringComparison.InvariantCultureIgnoreCase)))
-                    return DeviceMode.Tablet;
+                    return DeviceMode.Mobile;
                 else
                     throw new Exception(string.Format("Invalid deviceName:{0} specified",deviceName));
 

@@ -13,13 +13,11 @@ C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\UnitTestProject3.dll
 C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\WebDriver.dll
 C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\WebDriver.Support.dll
 C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\Newtonsoft.Json.dll
-C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\Builder.pdb
 C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\Harnss.pdb
 C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\UnitTestProject3.pdb
 C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\WebDriver.xml
 C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\WebDriver.Support.xml
 C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\Newtonsoft.Json.xml
-C:\Anantha\ResponsiveDesignFramework\Automation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Anantha\ResponsiveDesignFramework\Automation\obj\Debug\Automation.dll
 C:\Anantha\ResponsiveDesignFramework\Automation\obj\Debug\Automation.pdb

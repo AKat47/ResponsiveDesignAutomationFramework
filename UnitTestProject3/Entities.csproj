@@ -40,7 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Builder">
-      <HintPath>..\Builder\bin\Debug\Builder.dll</HintPath>
+      <HintPath>..\Builder\obj\Debug\Builder.dll</HintPath>
     </Reference>
     <Reference Include="Harnss">
       <HintPath>..\Builder\bin\Debug\Harnss.dll</HintPath>
@@ -69,7 +69,6 @@
     <Compile Include="Pages\Redmart\HomePage.cs" />
     <Compile Include="Pages\Redmart\PageNavigation.cs" />
     <Compile Include="UIAutomation.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

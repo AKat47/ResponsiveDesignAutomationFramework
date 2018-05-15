@@ -1,9 +1,5 @@
 C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\obj\Debug\Entities.csproj.CoreCompileInputs.cache
-C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\UnitTestProject3.dll
-C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\UnitTestProject3.pdb
+C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\obj\Debug\Entities.csprojResolveAssemblyReference.cache
 C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Builder.dll
 C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Harnss.dll
 C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
@@ -18,6 +14,10 @@ C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Microsoft.Visual
 C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\WebDriver.xml
 C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\WebDriver.Support.xml
 C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Newtonsoft.Json.xml
-C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\obj\Debug\Entities.csprojResolveAssemblyReference.cache
 C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\obj\Debug\UnitTestProject3.dll
 C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\obj\Debug\UnitTestProject3.pdb
+C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\UnitTestProject3.dll
+C:\Anantha\ResponsiveDesignFramework\UnitTestProject3\bin\Debug\UnitTestProject3.pdb

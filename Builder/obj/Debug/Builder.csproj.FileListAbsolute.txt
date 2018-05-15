@@ -1,4 +1,6 @@
 C:\Anantha\Automation%20Framework.Anantha.krishnan\Builder\obj\Debug\Builder.csproj.CoreCompileInputs.cache
+C:\Anantha\ResponsiveDesignFramework\Builder\obj\Debug\Builder.csprojResolveAssemblyReference.cache
+C:\Anantha\ResponsiveDesignFramework\Builder\obj\Debug\Builder.csproj.CoreCompileInputs.cache
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\Builder.dll
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\Builder.pdb
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\Harnss.dll
@@ -10,7 +12,5 @@ C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\Harnss.pdb
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\WebDriver.xml
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\WebDriver.Support.xml
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\Newtonsoft.Json.xml
-C:\Anantha\ResponsiveDesignFramework\Builder\obj\Debug\Builder.csprojResolveAssemblyReference.cache
-C:\Anantha\ResponsiveDesignFramework\Builder\obj\Debug\Builder.csproj.CoreCompileInputs.cache
 C:\Anantha\ResponsiveDesignFramework\Builder\obj\Debug\Builder.dll
 C:\Anantha\ResponsiveDesignFramework\Builder\obj\Debug\Builder.pdb

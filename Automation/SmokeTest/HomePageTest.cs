@@ -12,8 +12,10 @@ namespace Automation
         public void AddCart()
         {
             Page.homePage.Navigate();
-            Page.homePage.SideLinks.Click();
-            Page.homePage.SelectMenu("Frozen").Click();
+            var element = DriverManager.Instance.FindElement(By.XPath("//div[contains(@class,'header_left')]"));
+            DriverManager.Instance.JsExecutor().ExecuteScript("arguments[0].click();", element.WrappedElement);
+            Page.homePageHelper.NavigateTo("Frozen");
+            Page.homePageHelper.SelectItem("Magnum");
         }
 
 
