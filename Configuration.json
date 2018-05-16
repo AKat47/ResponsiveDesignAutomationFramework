@@ -4,7 +4,7 @@
   "Username": "QATests",
   "Password": "QATestsPass",
   "ScreenshotLocation": "C:\\ScreenshotLocation",
-  "deviceName": "iPhone 6",
+  "deviceName": "",
   "EnironmentConfig": [
     {
       "Environment": "local",

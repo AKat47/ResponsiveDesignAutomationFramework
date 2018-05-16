@@ -1,1 +1,13 @@
 C:\Anantha\Automation%20Framework.Anantha.krishnan\Harness\obj\Debug\Harness.csproj.CoreCompileInputs.cache
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\bin\Debug\Newtonsoft.Json.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\bin\Debug\WebDriver.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\bin\Debug\WebDriver.Support.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\bin\Debug\Newtonsoft.Json.xml
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\bin\Debug\WebDriver.xml
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\bin\Debug\WebDriver.Support.xml
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\obj\Debug\Harness.csproj.CoreCompileInputs.cache
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\bin\Debug\Harness.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\bin\Debug\Harness.pdb
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\obj\Debug\Harness.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Harness\obj\Debug\Harness.pdb

@@ -6,8 +6,9 @@ using Builder.Driver;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using Builder.Element;
 
-namespace Builder
+namespace Builder.Driver
 {
     public sealed class DriverWrapper : WebDriver
     {

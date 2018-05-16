@@ -69,13 +69,13 @@
       <Project>{6A5A2901-9488-4F5D-BDA4-3713D9455F31}</Project>
       <Name>Builder</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{D783507B-61AA-4089-BA81-7492CC7E9C90}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Harness\Harness.csproj">
       <Project>{F9FB9756-8A9D-4589-A403-328F83B3A499}</Project>
       <Name>Harness</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UnitTestProject3\Entities.csproj">
-      <Project>{D783507B-61AA-4089-BA81-7492CC7E9C90}</Project>
-      <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

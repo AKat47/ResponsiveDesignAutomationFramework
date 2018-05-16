@@ -1,9 +1,9 @@
-using Harness.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Reflection;
 
-namespace Harness.ReadSettings
+namespace Harness
 {
     public static class Configurations
     {
@@ -20,8 +20,9 @@ namespace Harness.ReadSettings
     {
         public static void ReadConfig()
         {
-             string filePath = @"C:\Anantha\ResponsiveDesignFramework\Configuration.json";
-             string jsonString = File.ReadAllText(filePath);
+            string jsonString = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Configuration.json");
+            //string filePath = @"C:\Anantha\ResponsiveDesignFramework\Configuration.json";
+            // string jsonString = File.ReadAllText(filePath);
              RootObject configModel = JsonConvert.DeserializeObject<RootObject>(jsonString);
              foreach(EnironmentConfig config in configModel.EnironmentConfig)
              {

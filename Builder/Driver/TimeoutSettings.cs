@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Builder.DriverManager
+namespace Builder.Driver
 {
     public static class TimeoutSettings
     {

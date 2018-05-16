@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 using System;
 using System.Linq;
 
-namespace Builder
+namespace Builder.Element
 {
     public class BaseElement : IBaseElement
     {
@@ -15,7 +15,7 @@ namespace Builder
         protected IWebElement _wrappedElement = null;
 
         public BaseElement(WebDriver driver,IBaseElement element)
-    : this(DriverManager.DriverManager.Instance, element.ElementLocator, element.WrappedElement)
+    : this(DriverManager.Instance, element.ElementLocator, element.WrappedElement)
         {
         }
 

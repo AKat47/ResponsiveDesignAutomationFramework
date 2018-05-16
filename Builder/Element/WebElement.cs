@@ -2,7 +2,7 @@
 using Builder.Driver;
 using OpenQA.Selenium;
 
-namespace Builder
+namespace Builder.Element
 {
     public class WebElement : BaseElement,IElement
     {

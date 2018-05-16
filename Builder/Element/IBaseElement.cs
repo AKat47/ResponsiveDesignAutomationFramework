@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace Builder
+namespace Builder.Element
 {
     public interface IBaseElement
     {

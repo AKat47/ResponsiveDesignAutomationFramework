@@ -1,15 +1,9 @@
-﻿using Builder.Driver;
-using Harness.ReadSettings;
-using OpenQA.Selenium;
+﻿using Harness;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Builder.DriverManager
+namespace Builder.Driver
 {
 
     public static class Browser

@@ -1,7 +1,7 @@
-﻿using Builder.DriverManager;
+﻿using Builder.Driver;
 using Entities;
 using Entities.Pages.Redmart;
-using Harness.ReadSettings;
+using Harness;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 

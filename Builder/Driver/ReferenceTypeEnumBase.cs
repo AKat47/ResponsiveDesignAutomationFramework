@@ -1,4 +1,4 @@
-﻿namespace Builder.DriverManager
+﻿namespace Builder.Driver
 {
     public class ReferenceTypeEnumBase<T>
     {

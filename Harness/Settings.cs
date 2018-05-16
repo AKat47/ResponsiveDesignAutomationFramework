@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Harness.Configuration
+namespace Harness
 {
 
     public class EnironmentConfig

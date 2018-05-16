@@ -1,1 +1,16 @@
 C:\Anantha\Automation%20Framework.Anantha.krishnan\Builder\obj\Debug\Builder.csproj.CoreCompileInputs.cache
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\Builder.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\Builder.pdb
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\WebDriver.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\WebDriver.Support.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\Newtonsoft.Json.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\WebDriver.xml
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\WebDriver.Support.xml
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\Newtonsoft.Json.xml
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\obj\Debug\Builder.csprojResolveAssemblyReference.cache
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\obj\Debug\Builder.csproj.CoreCompileInputs.cache
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\obj\Debug\Builder.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\obj\Debug\Builder.pdb
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\Harness.dll
+C:\ResponsiveDesignFramework\ResponsiveDesignAutomationFramework\Builder\bin\Debug\Harness.pdb
