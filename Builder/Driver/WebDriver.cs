@@ -12,7 +12,7 @@ namespace Builder.Driver
 
         string Url { get; }
 
-        IWebDriver NativeDriver { get; set; }
+        IWebDriver NativeDriver { get;}
 
         string TestName { get;}
 
@@ -31,6 +31,8 @@ namespace Builder.Driver
         void WaitForPageLoad();
 
         IJavaScriptExecutor JsExecutor();
+
+        void TakeFailureScreenshot();
     }
 
 }

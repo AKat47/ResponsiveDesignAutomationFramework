@@ -11,7 +11,7 @@ namespace Automation
         {
             Page.homePage.Navigate();
             Page.homePageHelper.NavigateTo("Frozen");
-            Page.homePageHelper.SelectItem("Magnum");
+            Page.homePageHelper.SelectItem("aMagnum");
         }
 
     }

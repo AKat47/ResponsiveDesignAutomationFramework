@@ -13,6 +13,7 @@ namespace Automation
         public string SuperUser;
         public string SuperPassword;
         public string TestName;
+        public TestContext TestContext { get; set; }
 
         [TestInitialize]
         public void Initialize()
@@ -32,6 +33,11 @@ namespace Automation
         [TestCleanup]
         public void cleanup()
         {
+            if ((TestContext.CurrentTestOutcome != UnitTestOutcome.Passed))
+            {
+                DriverManager.Instance.TakeFailureScreenshot();
+            }
+
             DriverManager.Instance.NativeDriver.Quit();
             DriverManager.Reset();
         }

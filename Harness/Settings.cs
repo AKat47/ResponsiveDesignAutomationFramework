@@ -8,9 +8,7 @@ namespace Harness
     {
         public string Environment { get; set; }
         public Uri Url { get; set; }
-        public string DBInstance { get; set; }      
-        
-        public string ScreenshotLocation { get; set; }
+        public string DBInstance { get; set; }  
     }
 
     public class RootObject
@@ -21,5 +19,6 @@ namespace Harness
         public string userName { get; set; }
         public string passWord { get; set; }
         public string deviceName { get; set; }
+        public string ScreenshotLocation { get; set; }
     }
 }

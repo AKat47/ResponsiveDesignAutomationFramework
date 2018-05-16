@@ -13,6 +13,7 @@ namespace Harness
         public static string userName;
         public static string passWord;
         public static string deviceName;
+        public static string screenShotLocation;
 
     }
 
@@ -38,6 +39,7 @@ namespace Harness
             Configurations.browserName = configModel.browserName;
             Configurations.userName = configModel.userName;
             Configurations.passWord = configModel.passWord;
+            Configurations.screenShotLocation = configModel.ScreenshotLocation;
             
 
         }

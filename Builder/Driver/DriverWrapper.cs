@@ -7,10 +7,12 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using Builder.Element;
+using Harness;
+using System.IO;
 
 namespace Builder.Driver
 {
-    public sealed class DriverWrapper : WebDriver
+    public class DriverWrapper : WebDriver
     {
         private IWebDriver WebDriver;
 
@@ -31,10 +33,6 @@ namespace Builder.Driver
             get
             {
                 return WebDriver;
-            }
-            set
-            {
-                NativeDriver = new ChromeDriver();
             }
 
         }
@@ -124,6 +122,45 @@ namespace Builder.Driver
                 return js;            
         }
 
+        public void TakeFailureScreenshot()
+        {
+            if (String.IsNullOrEmpty(TestName))
+            {
+                TakeScreenshot("Not called with a valid Test Context" + DateTime.Now.ToString("_HH_mm_ss"), ScreenshotType.Failure);
+
+                return;
+            }
+
+            TakeScreenshot(TestName, ScreenshotType.Failure);
+        }
+
+        private void TakeScreenshot(string fileName, ScreenshotType screenshotType)
+        {
+            if ((screenshotType == ScreenshotType.Information) && (Configurations.screenShotLocation == null)) return;
+
+            string screenshotLocation = Configurations.screenShotLocation;
+
+            if (!Directory.Exists(screenshotLocation))
+            {
+                try
+                {
+                    Directory.CreateDirectory(screenshotLocation);
+                }
+                // Ignore the following cases:
+                catch (IOException) { /* The directory specified by path is a file .-or-The network name is not known. */ }
+                catch (UnauthorizedAccessException) { /* The caller does not have the required permission. */ }
+            }
+
+            try
+            {
+                ((ITakesScreenshot)(NativeDriver))
+                    .GetScreenshot()
+                    .SaveAsFile(screenshotLocation + "\\" + fileName + screenshotType.Value + ".png", ScreenshotImageFormat.Bmp);
+            }
+            catch (Exception) { /* The test will not fail if saving the screenshot is not successful. */ }
+        }
+
+
         public WebElement FindElement(By elementLocator)
         {
             var element = NativeDriver.FindElements(elementLocator);
@@ -189,6 +226,17 @@ namespace Builder.Driver
             catch (Exception) { }
 
             return (new WebElement(this, primaryLocator));
+        }
+
+        public sealed class ScreenshotType : ReferenceTypeEnumBase<string>
+        {
+            private ScreenshotType(string value)
+                : base(value)
+            {
+            }
+
+            public static ScreenshotType Failure = new ScreenshotType("_FAIL");
+            public static ScreenshotType Information = new ScreenshotType("_INFO");
         }
     }
 }
