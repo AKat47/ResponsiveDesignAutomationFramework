@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Builder.Driver;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 
 namespace Automation
@@ -10,8 +11,8 @@ namespace Automation
         public void AddCart()
         {
             Page.homePage.Navigate();
-            Page.homePageHelper.NavigateTo("Frozen");
-            Page.homePageHelper.SelectItem("aMagnum");
+            Page.homePage.SearchBox.Click();
+            Page.homePageHelper.SearchItem("Milk");
         }
 
     }

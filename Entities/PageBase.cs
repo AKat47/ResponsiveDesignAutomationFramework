@@ -14,7 +14,6 @@ namespace Entities
         public void Navigate()
         {
             if (IsOnExpectedPage()) return;
-
             DriverManager.Instance.Navigate(Urls().First());
         }
 

@@ -9,6 +9,7 @@ using OpenQA.Selenium.Support.UI;
 using Builder.Element;
 using Harness;
 using System.IO;
+using OpenQA.Selenium.Appium.Android;
 
 namespace Builder.Driver
 {
@@ -16,12 +17,16 @@ namespace Builder.Driver
     {
         private IWebDriver WebDriver;
 
+        private AndroidDriver<IWebElement> appiumDriver = null;
+
         private string browserName;
 
         public DriverWrapper(IWebDriver chromeDriver)
         {
             this.WebDriver = chromeDriver;
         }
+
+        public DriverWrapper(){}
 
         public DriverWrapper(string browserName)
         {
@@ -36,7 +41,6 @@ namespace Builder.Driver
             }
 
         }
-
 
         public void Navigate(Uri url)
         {
@@ -116,6 +120,10 @@ namespace Builder.Driver
             }
         }
 
+        AndroidDriver<IWebElement> WebDriver.androidDriver => throw new NotImplementedException();
+
+        public string Context { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public IJavaScriptExecutor JsExecutor()
         {
                 IJavaScriptExecutor js = (IJavaScriptExecutor)NativeDriver;
@@ -163,12 +171,18 @@ namespace Builder.Driver
 
         public WebElement FindElement(By elementLocator)
         {
-            var element = NativeDriver.FindElements(elementLocator);
-            if (element.Count > 0)
-                return new WebElement(this,elementLocator);
-            else
+            try
+            {
+                var element = NativeDriver.FindElements(elementLocator);
+                if (element.Count > 0)
+                    return new WebElement(this, elementLocator);
+                else
+                    throw new Exception(string.Format("Element not found : {0}", elementLocator));
+            }
+            catch(Exception)
+            {
                 throw new Exception(string.Format("Element not found : {0}", elementLocator));
-
+            }
         }
 
         public IList<WebElement> FindElements(By elementLocator)

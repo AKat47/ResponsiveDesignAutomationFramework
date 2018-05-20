@@ -13,8 +13,8 @@ namespace Harness
         public static string userName;
         public static string passWord;
         public static string deviceName;
+        public static bool realDevice;
         public static string screenShotLocation;
-
     }
 
     public static class ReadSettings
@@ -22,9 +22,7 @@ namespace Harness
         public static void ReadConfig()
         {
             string jsonString = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Configuration.json");
-            //string filePath = @"C:\Anantha\ResponsiveDesignFramework\Configuration.json";
-            // string jsonString = File.ReadAllText(filePath);
-             RootObject configModel = JsonConvert.DeserializeObject<RootObject>(jsonString);
+            RootObject configModel = JsonConvert.DeserializeObject<RootObject>(jsonString);
              foreach(EnironmentConfig config in configModel.EnironmentConfig)
              {
                 if(config.Environment == configModel.env)
@@ -36,6 +34,7 @@ namespace Harness
              }
 
             Configurations.deviceName = configModel.deviceName;
+            Configurations.realDevice = configModel.realDevice;
             Configurations.browserName = configModel.browserName;
             Configurations.userName = configModel.userName;
             Configurations.passWord = configModel.passWord;

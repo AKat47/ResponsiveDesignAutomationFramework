@@ -38,7 +38,10 @@ namespace Automation
                 DriverManager.Instance.TakeFailureScreenshot();
             }
 
-            DriverManager.Instance.NativeDriver.Quit();
+            if (Configurations.realDevice)
+                DriverManager.Instance.androidDriver.Quit();
+            else
+                DriverManager.Instance.NativeDriver.Quit();
             DriverManager.Reset();
         }
 

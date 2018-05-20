@@ -1,18 +1,21 @@
 ﻿using Builder.Element;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 
 namespace Builder.Driver
 {
-    public interface WebDriver
+    public interface WebDriver : MobileDriver
     {
         void Navigate(Uri url);
 
         string Url { get; }
 
         IWebDriver NativeDriver { get;}
+
+        AndroidDriver<IWebElement> androidDriver { get;}
 
         string TestName { get;}
 
@@ -33,6 +36,8 @@ namespace Builder.Driver
         IJavaScriptExecutor JsExecutor();
 
         void TakeFailureScreenshot();
+
+
     }
 
 }

@@ -4,16 +4,17 @@
   "Username": "QATests",
   "Password": "QATestsPass",
   "ScreenshotLocation": "C:\\ScreenshotLocation",
-  "deviceName": "",
+  "deviceName": "iPhone 6",
+  "realDevice": "false",
   "EnironmentConfig": [
     {
       "Environment": "local",
-      "Url": "http://www.redmart.com",
+      "Url": "http://www.amazon.com",
       "DBInstance": "local"
     },
     {
       "Environment": "UAT",
-      "Url": "http://uat/redmart.com",
+      "Url": "http://uat/amazon.com",
       "DBInstance": "WebDriver"
     }
   ]

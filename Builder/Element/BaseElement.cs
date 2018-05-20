@@ -1,5 +1,6 @@
 ﻿using Builder;
 using Builder.Driver;
+using Harness;
 using OpenQA.Selenium;
 using System;
 using System.Linq;
@@ -37,11 +38,23 @@ namespace Builder.Element
             {
                 if (_wrappedElement == null)
                 {
-                    var element = _driver.NativeDriver.FindElements(ElementLocator);
-                    if (element.Count > 0)
-                        return element.FirstOrDefault(e => e.Displayed);
+                    if (Configurations.realDevice)
+                    {
+                        var element = _driver.androidDriver.FindElements(ElementLocator);
+                        if (element.Count > 0)
+                            return element.FirstOrDefault(e => e.Displayed);
+                        else
+                            throw new Exception(string.Format("Element of Locator : {0} not found", ElementLocator));
+
+                    }
                     else
-                        throw new Exception(string.Format("Element of Locator : {0}", ElementLocator));
+                    {
+                        var element = _driver.NativeDriver.FindElements(ElementLocator);
+                        if (element.Count > 0)
+                            return element.FirstOrDefault(e => e.Displayed);
+                        else
+                            throw new Exception(string.Format("Element of Locator : {0} not found", ElementLocator));
+                    }
                 }
                 else
                 {

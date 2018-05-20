@@ -1,5 +1,12 @@
 ﻿using Harness;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Appium.Android;
+using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Remote;
 using System;
 using System.Linq;
 
@@ -12,9 +19,10 @@ namespace Builder.Driver
         public const string Firefox = "Firefox";
         public const string IE = "IE";
         public const string Safari = "Safari";
+        public const string Edge = "Edge";
     }
 
-    
+
     public sealed class DriverManager
     {
         [ThreadStatic]
@@ -22,10 +30,36 @@ namespace Builder.Driver
 
         private WebDriver driver = null;
 
-        private DriverManager(string browserName)
+        private AndroidDriver<IWebElement> androidDriver = null;
+
+        private string browserName
+        {
+            get
+            {
+                return Configurations.browserName;
+            }
+        }
+        
+        private DriverManager()
         {
             var mode = Mode;
-            if (browserName == Browser.Chrome)
+
+            if(String.IsNullOrEmpty(Configurations.deviceName) && String.IsNullOrEmpty(Configurations.browserName))
+            {
+                throw new Exception("Both deviceName & browserName setting are empty");
+            }
+
+            if(Configurations.realDevice)
+            {
+                DesiredCapabilities capabilities = new DesiredCapabilities();
+
+                capabilities.SetCapability("Platform", PlatformType.Android);
+                capabilities.SetCapability("deviceName", "HT71S1600359");
+                capabilities.SetCapability(MobileCapabilityType.BrowserName, "Chrome");
+                driver = new MobileWrapper(new AndroidDriver<IWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"),capabilities));
+                driver.Context = "CHROMIUM";
+            }
+            else if (browserName == Browser.Chrome)
             {
                 if (String.IsNullOrEmpty(Configurations.deviceName))
                 {
@@ -40,6 +74,19 @@ namespace Builder.Driver
                     driver = new DriverWrapper(new ChromeDriver(chromeOptions));
                 }
             }
+            else if(browserName == Browser.IE)
+            {
+                driver = new DriverWrapper(new InternetExplorerDriver());
+            }
+            else if(browserName == Browser.Firefox)
+            {
+                driver = new DriverWrapper(new FirefoxDriver());
+            }
+            else if(browserName == Browser.Edge)
+            {
+                driver = new DriverWrapper(new EdgeDriver());
+            }
+
         }
 
         public static WebDriver Instance
@@ -47,7 +94,7 @@ namespace Builder.Driver
             get
             {
                 if (instance != null) return instance.driver;
-                instance = new DriverManager(Configurations.browserName);
+                instance = new DriverManager();
                 return instance.driver;
             }
         }

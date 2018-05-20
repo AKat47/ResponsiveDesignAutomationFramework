@@ -45,5 +45,15 @@ namespace Entities.Pages.Redmart
                     By.XPath("//section//div/a[text()='Magnum Store']")
                 });
         }
+
+        public WebElement SearchBox
+        {
+            get
+            {
+                return DriverManager.Instance.FindElement(By.Id("nav-logobar-greeting"));
+                //return DriverManager.Instance.FindElement(By.XPath("//input[contains(@class,'SearchInputBox')]"));
+            }
+        }
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Entities.Pages.Redmart;
+using OpenQA.Selenium;
 
 namespace Entities.Helper.Desktop
 {
@@ -10,16 +11,15 @@ namespace Entities.Helper.Desktop
         {
             this.R = page;
         }
-        public void NavigateTo(string page)
-        {
-            R.homePage.Navigate();
-            R.homePage.SideLinks.Click();
-            R.homePage.SelectMenu("Frozen").Click();
-        }
 
         public void SelectItem(string itemName)
         {
             R.homePage.Item(itemName).Click();
+        }
+
+        public void SearchItem(string itemName)
+        {
+            R.homePage.SearchBox.ClearandSend(itemName + Keys.Enter);
         }
     }
 }
