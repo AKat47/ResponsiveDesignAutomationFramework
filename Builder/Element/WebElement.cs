@@ -11,7 +11,12 @@ namespace Builder.Element
             : base(driver, elementLocator)
         {
         }
-       
+
+        public WebElement(WebDriver driver, By elementLocator,IWebElement element)
+            : base(driver, elementLocator,element)
+        {
+        }
+
         public void Click()
         {
             WrappedElement.Click();

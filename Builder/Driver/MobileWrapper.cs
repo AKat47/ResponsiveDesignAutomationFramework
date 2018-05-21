@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Builder.Element;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Android;
 using System;
 using System.Collections.Generic;
@@ -92,6 +93,22 @@ namespace Builder.Driver
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_appiumDriver;
             return js;
+        }
+
+        public new WebElement FindElement(By elementLocator)
+        {
+            try
+            {
+                var element = _appiumDriver.FindElements(elementLocator);
+                if (element.Count > 0)
+                    return new WebElement(this, elementLocator);
+                else
+                    throw new Exception(string.Format("Element not found : {0}", elementLocator));
+            }
+            catch (Exception)
+            {
+                throw new Exception(string.Format("Element not found : {0}", elementLocator));
+            }
         }
 
 

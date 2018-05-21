@@ -207,7 +207,7 @@ namespace Builder.Driver
         {
             List<WebElement> result = new List<WebElement>();
 
-            NativeDriver.FindElements(locator).ToList().ForEach(e => result.Add(new WebElement(this, locator)));
+            NativeDriver.FindElements(locator).ToList().ForEach(e => result.Add(new WebElement(this, locator,e)));
 
             return result;
         }

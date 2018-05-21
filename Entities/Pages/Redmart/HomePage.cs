@@ -50,8 +50,8 @@ namespace Entities.Pages.Redmart
         {
             get
             {
-                return DriverManager.Instance.FindElement(By.Id("nav-logobar-greeting"));
-                //return DriverManager.Instance.FindElement(By.XPath("//input[contains(@class,'SearchInputBox')]"));
+                return DriverManager.Instance.FindElement(By.Id("nav-search-keywords"),
+                    new List<By> { By.XPath("//div[contains(@class,'nav-search-field')]/input")  });
             }
         }
 
