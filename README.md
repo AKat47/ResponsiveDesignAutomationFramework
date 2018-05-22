@@ -1,18 +1,26 @@
 # Project Title
 
-One Paragraph of project description goes here
+Automation framework which provides flexibility to run a test against any screen resolution, emulators or real devices
+Utilizes both Selenium and Appium driver to provide different flavors to the test
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Clone the repository
+
+```
+git clone https://github.com/AKat47/ResponsiveDesignAutomationFramework.git
+```
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Install Appium Server
 
 ```
-Give examples
+https://github.com/appium/appium-desktop
 ```
+
+Install SDK Tools
+
 
 ### Installing
 

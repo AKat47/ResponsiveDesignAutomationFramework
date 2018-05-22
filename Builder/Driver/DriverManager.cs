@@ -54,7 +54,7 @@ namespace Builder.Driver
                 DesiredCapabilities capabilities = new DesiredCapabilities();
 
                 capabilities.SetCapability("Platform", PlatformType.Android);
-                capabilities.SetCapability("deviceName", "HT71S1600359");
+                capabilities.SetCapability("deviceName", Configurations.deviceName);
                 capabilities.SetCapability(MobileCapabilityType.BrowserName, "Chrome");
                 driver = new MobileWrapper(new AndroidDriver<IWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"),capabilities));
                 driver.Context = "CHROMIUM";

@@ -5,7 +5,7 @@
   "Password": "QATestsPass",
   "ScreenshotLocation": "C:\\ScreenshotLocation",
   "deviceName": "",
-  "realDevice": "false",
+  "realDevice": "true",
   "EnironmentConfig": [
     {
       "Environment": "local",
