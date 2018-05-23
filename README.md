@@ -1,6 +1,7 @@
-# Project Title
+# Responsive Design Framework
 
 Automation framework which provides flexibility to run a test against any screen resolution, emulators or real devices
+
 Utilizes both Selenium and Appium driver to provide different flavors to the test
 
 ## Getting Started
@@ -12,6 +13,13 @@ git clone https://github.com/AKat47/ResponsiveDesignAutomationFramework.git
 ```
 
 ### Prerequisites
+Visual Studio 
+
+.Net Framework (4.5 & above)
+
+All Browsers installed (IE11, Edge, Chrome, Firefox)
+
+Android devices (with developer mode enabled)
 
 Install Appium Server
 
@@ -19,23 +27,39 @@ Install Appium Server
 https://github.com/appium/appium-desktop
 ```
 
-Install SDK Tools
+Install Android SDK Tools
 
+```
+https://developer.android.com/studio/releases/platform-tools
+```
+
+Extract the file and make sure to add it to environment PATH
+
+Selenium Drivers
+
+```
+Download Chrome,IE,Edge and Firefox selenium webdrivers 
+```
+
+Add their location to environment PATH
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+Verify all tools are working fine
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Android SDK Tools
 
 ```
-until finished
+Open CMD and type adb
+
+```
+
+Selenium WebDrivers
+
+```
+Open CMD and type 
+1. chromedriver
+2. InternetExplorerDriver
 ```
 
 End with an example of getting some data out of the system or using it for a little demo

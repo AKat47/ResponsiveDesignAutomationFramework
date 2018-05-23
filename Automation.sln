@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSuite", "Automation\TestSuite.csproj", "{3AA3F372-971E-4221-931D-ED71C02DFC73}"
 EndProject
@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{42
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{827C609D-7831-4549-B312-08AD4A623D05}"
 	ProjectSection(SolutionItems) = preProject
+		Drivers\chromedriver.exe = Drivers\chromedriver.exe
+		Drivers\geckodriver.exe = Drivers\geckodriver.exe
+		Drivers\IEDriverServer.exe = Drivers\IEDriverServer.exe
+		Drivers\MicrosoftWebDriver.exe = Drivers\MicrosoftWebDriver.exe
 		TestSettings1.testsettings = TestSettings1.testsettings
 	EndProjectSection
 EndProject

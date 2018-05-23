@@ -3,6 +3,10 @@
   <Description>These are default test settings for a local test run.</Description>
   <Deployment>
     <DeploymentItem filename="Configuration.json" />
+    <DeploymentItem filename="Drivers\geckodriver.exe" />
+    <DeploymentItem filename="Drivers\IEDriverServer.exe" />
+    <DeploymentItem filename="Drivers\chromedriver.exe" />
+    <DeploymentItem filename="Drivers\MicrosoftWebDriver.exe" />
   </Deployment>
   <Execution parallelTestCount="20">
     <TestTypeSpecific>
@@ -12,7 +16,7 @@
         </AssemblyResolution>
       </UnitTestRunConfig>
     </TestTypeSpecific>
-    <AgentRule name="Execution Agents">
+    <AgentRule name="LocalMachineDefaultRole">
     </AgentRule>
   </Execution>
   <Properties />

@@ -13,8 +13,13 @@ using System.Linq;
 namespace Builder.Driver
 {
 
-    public static class Browser
+    public sealed class BrowserName :ReferenceTypeEnumBase<string>
     {
+        public BrowserName(string value)
+         : base(value)
+        {
+        }
+
         public const string Chrome = "chrome";
         public const string Firefox = "Firefox";
         public const string IE = "IE";
@@ -59,7 +64,7 @@ namespace Builder.Driver
                 driver = new MobileWrapper(new AndroidDriver<IWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"),capabilities));
                 driver.Context = "CHROMIUM";
             }
-            else if (browserName == Browser.Chrome)
+            else if (browserName == BrowserName.Chrome)
             {
                 if (String.IsNullOrEmpty(Configurations.deviceName))
                 {
@@ -74,15 +79,15 @@ namespace Builder.Driver
                     driver = new DriverWrapper(new ChromeDriver(chromeOptions));
                 }
             }
-            else if(browserName == Browser.IE)
+            else if(browserName == BrowserName.IE)
             {
                 driver = new DriverWrapper(new InternetExplorerDriver());
             }
-            else if(browserName == Browser.Firefox)
+            else if(browserName == BrowserName.Firefox)
             {
                 driver = new DriverWrapper(new FirefoxDriver());
             }
-            else if(browserName == Browser.Edge)
+            else if(browserName == BrowserName.Edge)
             {
                 driver = new DriverWrapper(new EdgeDriver());
             }

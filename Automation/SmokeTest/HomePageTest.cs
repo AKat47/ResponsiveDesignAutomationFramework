@@ -5,8 +5,12 @@ using OpenQA.Selenium;
 namespace Automation
 {
     [TestClass]
-    public class UnitTest1 : TestBase
+    public class SmokeTest : TestBase
     {
+        [DataRow(BrowserName.Chrome)]
+        [DataRow(BrowserName.Firefox)]
+        [DataRow(BrowserName.IE)]
+        [DataRow(BrowserName.Edge)]
         [TestMethod]
         public void AddCart()
         {
