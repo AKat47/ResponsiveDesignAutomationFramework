@@ -4,6 +4,8 @@ Automation framework which provides flexibility to run a test against any screen
 
 Utilizes both Selenium and Appium driver to provide different flavors to the test
 
+[![ADB](images/Responsivedesign.JPG)]
+
 ## Getting Started
 
 Clone the repository
@@ -45,7 +47,7 @@ Open CMD and type adb
 
 ```
 
-[![ADB](images/ADB.Jpeg)]
+[![ADB](images/ADB.JPG)]
 
 Connect device using USB to the system under test and ensure RSA Encryption is accepted
 
@@ -62,7 +64,6 @@ dotnet test
 
 ```
 
-[IMAGE]
 
 ### What are the tests
 
@@ -73,23 +74,30 @@ The execution of the test is based on the parameters passed in DataRow property
 #### Cross Browser Testing
 
 ```
-1. AddCart_OnBrowsers
+[DataTestMethod]
+[DataRow(BrowserName.Chrome)]
+public void AddCart_OnBrowsers(string browserName)
 
 Runs on browser mode with full resolution (using Selenium)
 ```
 
-```
 
 #### Emulator Testing
-2. AddCart_OnEmulators
+
+```
+[DataTestMethod]
+[DataRow(BrowserName.Chrome,"iPhone 6",false)]
+public void AddCart_OnEmulators(string browserName,string deviceName,bool realDevice)
 
 Runs on browser mode with full resolution (using chrome mobile emulation + Selenium)
 ```
 
-```
-
 #### Real Device Testing
-3. AddCart_OnRealDevices
+
+```
+[DataTestMethod]
+[DataRow(BrowserName.Chrome, "HT71S1632212", true)]
+public void AddCart_OnRealDevices(string browserName, string deviceName, bool realDevice)
 
 Runs on specified browser on a real device(using Appium)
 ```
@@ -111,16 +119,13 @@ Runs on specified browser on a real device(using Appium)
 ## Built With
 
 * C#
-* [Selenium Webdriver](https://maven.apache.org/) - Dependency Management
-* [Appium](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Selenium Webdriver](https://www.seleniumhq.org/projects/webdriver/) - To interact with browsers on system
+* [Appium](http://appium.io/) - To interact with browsers/Native APP on mobile
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
-* **Anantha Krishnan** - *Initial work* - [PurpleBooth](https://github.com/AKat47)
+* **Anantha Krishnan** - *Initial work* - [AKat47](https://github.com/AKat47)
 
 ## License
 
