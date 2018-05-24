@@ -31,7 +31,7 @@ namespace Entities.Pages.Amazon
             }
         }
 
-        public WebElement ResultItem(int itemName)
+        public WebElement ResultItem(string itemName)
         {
             return DriverManager.Instance.FindElement(By.XPath(string.Format("//ul[contains(@id,'s-results')]/li//a/h2[contains(text(),'{0}')]", itemName)),
                 new List<By> { By.XPath(string.Format("//ul[contains(@id,'resultItems')]/li//*[contains(text(),'{0}')]", itemName))

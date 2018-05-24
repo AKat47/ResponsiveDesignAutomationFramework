@@ -1,4 +1,5 @@
-﻿using Entities.Pages.Amazon;
+﻿using System;
+using Entities.Pages.Amazon;
 using OpenQA.Selenium;
 
 namespace Entities.Helper.Desktop
@@ -15,6 +16,14 @@ namespace Entities.Helper.Desktop
         public void SearchItem(string itemName)
         {
             R.homePage.SearchBox.ClearandSend(itemName + Keys.Enter);
+        }
+
+        public void AddToCart(string productName,string itemName)
+        {
+            R.homePage.SearchBox.Click();
+            SearchItem(productName);
+            R.homePage.ResultItem(itemName).Click();
+            R.homePage.AddToCartButton.Click();
         }
     }
 }

@@ -13,15 +13,14 @@ git clone https://github.com/AKat47/ResponsiveDesignAutomationFramework.git
 ```
 
 ### Prerequisites
-Visual Studio 
 
 1).Net Framework (4.5 & above)
 
-2)All Browsers installed (IE11, Edge, Chrome, Firefox)
+2) All Browsers installed (IE11, Edge, Chrome, Firefox)
 
-3)Android devices (with developer mode enabled)
+3) Android devices (with developer mode enabled)
 
-4)Appium Server
+4) Appium Server
 
 ```
 https://github.com/appium/appium-desktop
@@ -35,7 +34,7 @@ https://developer.android.com/studio/releases/platform-tools
 
 Extract the file and make sure to add it to environment PATH
 
-### Installing
+### Installation
 
 Verify all tools are working fine
 
@@ -45,6 +44,8 @@ Android SDK Tools
 Open CMD and type adb
 
 ```
+
+[![ADB](images/ADB.Jpeg)]
 
 Connect device using USB to the system under test and ensure RSA Encryption is accepted
 
