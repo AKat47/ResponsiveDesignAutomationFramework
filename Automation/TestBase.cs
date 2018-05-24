@@ -25,17 +25,20 @@ namespace Automation
         public void Initialize()
         {
             ReadSettings.ReadConfig();
-            var browser = BrowserAttribute;                    
-            InititializeConfig(BrowserName.Chrome);
+            var browser = BrowserAttribute;     
         }
 
-        public void InititializeConfig(string browserName)
+        public void InititializeConfig(string browserName,string deviceName = "",bool realDevice = false)
         {
+            Configurations.browserName = browserName;
+            Configurations.deviceName = deviceName;
+            Configurations.realDevice = realDevice;
             TestName = DriverManager.Instance.TestName;
             SuperUser = Configurations.userName;
             SuperPassword = Configurations.passWord;
             Page = UIAutomation.Page;
         }
+
 
         [TestCleanup]
         public void cleanup()
@@ -44,7 +47,11 @@ namespace Automation
             {
                 DriverManager.Instance.TakeFailureScreenshot();
             }
+            resetDriver();
+        }
 
+        private void resetDriver()
+        {
             if (Configurations.realDevice)
                 DriverManager.Instance.androidDriver.Quit();
             else
@@ -83,13 +90,13 @@ namespace Automation
 
                 var method = GetType().GetMethod(TestContext.TestName);
 
-                var attributeList = method.GetCustomAttributes(typeof(DataRowAttribute),true);
+                var attributeList = method.GetCustomAttributes(typeof(TestCategoryAttribute),true);
 
                 foreach (object attribute in attributeList)
                 {
-                    DataRowAttribute categotyAttribute = attribute as DataRowAttribute;
+                    TestCategoryAttribute categotyAttribute = attribute as TestCategoryAttribute;
 
-                    result.AddRange(categotyAttribute.Data.Select(e => e.ToString()));
+                    result.AddRange(categotyAttribute.TestCategories);
                 }
 
                 return result;

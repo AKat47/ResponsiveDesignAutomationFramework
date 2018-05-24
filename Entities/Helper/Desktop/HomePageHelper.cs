@@ -12,11 +12,6 @@ namespace Entities.Helper.Desktop
             this.R = page;
         }
 
-        public void SelectItem(string itemName)
-        {
-            R.homePage.Item(itemName).Click();
-        }
-
         public void SearchItem(string itemName)
         {
             R.homePage.SearchBox.ClearandSend(itemName + Keys.Enter);

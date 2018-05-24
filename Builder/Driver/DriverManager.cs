@@ -149,8 +149,10 @@ namespace Builder.Driver
                     return DeviceMode.Tablet;
                 else if (mobileList.Any(e => e.Equals(Configurations.deviceName, StringComparison.InvariantCultureIgnoreCase)))
                     return DeviceMode.Mobile;
+                else if (Configurations.realDevice)
+                    return DeviceMode.Mobile;
                 else
-                    throw new Exception(string.Format("Invalid deviceName:{0} specified",deviceName));
+                    throw new Exception(string.Format("Invalid deviceName:{0} specified", deviceName));
 
             }
         }
