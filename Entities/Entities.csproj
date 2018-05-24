@@ -56,8 +56,8 @@
     <Compile Include="Helper\Mobile\HomePageMobileHelper.cs" />
     <Compile Include="Helper\Tablet\HomePageTabletHelper.cs" />
     <Compile Include="PageBase.cs" />
-    <Compile Include="Pages\Redmart\HomePage.cs" />
-    <Compile Include="Pages\Redmart\PageNavigation.cs" />
+    <Compile Include="Pages\Amazon\HomePage.cs" />
+    <Compile Include="Pages\Amazon\PageNavigation.cs" />
     <Compile Include="UIAutomation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

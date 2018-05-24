@@ -1,5 +1,5 @@
 ﻿using Entities.Helper.Desktop;
-using Entities.Pages.Redmart;
+using Entities.Pages.Amazon;
 
 namespace Entities.Helper.Mobile
 {

@@ -31,7 +31,7 @@ namespace Automation
         }
 
         [DataTestMethod]
-        [DataRow(BrowserName.Chrome, "HT71S1632212", false)]
+        [DataRow(BrowserName.Chrome, "HT71S1632212", true)]
         public void AddCart_OnRealDevices(string browserName, string deviceName, bool realDevice)
         {
             InititializeConfig(browserName, deviceName, realDevice);

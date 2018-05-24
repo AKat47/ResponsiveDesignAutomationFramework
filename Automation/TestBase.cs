@@ -1,7 +1,7 @@
 ﻿using Builder.Driver;
 using Castle.Core.Internal;
 using Entities;
-using Entities.Pages.Redmart;
+using Entities.Pages.Amazon;
 using Harness;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;

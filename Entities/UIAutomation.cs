@@ -1,4 +1,4 @@
-﻿using Entities.Pages.Redmart;
+﻿using Entities.Pages.Amazon;
 
 namespace Entities
 {

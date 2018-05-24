@@ -5,7 +5,6 @@ C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\Builder.pdb
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\appium-dotnet-driver.dll
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\Castle.Core.dll
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\Harness.dll
-C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\Newtonsoft.Json.dll
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\WebDriver.dll
 C:\Anantha\ResponsiveDesignFramework\Builder\bin\Debug\WebDriver.Support.dll

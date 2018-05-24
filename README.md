@@ -15,13 +15,13 @@ git clone https://github.com/AKat47/ResponsiveDesignAutomationFramework.git
 ### Prerequisites
 Visual Studio 
 
-.Net Framework (4.5 & above)
+1).Net Framework (4.5 & above)
 
-All Browsers installed (IE11, Edge, Chrome, Firefox)
+2)All Browsers installed (IE11, Edge, Chrome, Firefox)
 
-Android devices (with developer mode enabled)
+3)Android devices (with developer mode enabled)
 
-Install Appium Server
+4)Appium Server
 
 ```
 https://github.com/appium/appium-desktop
@@ -35,14 +35,6 @@ https://developer.android.com/studio/releases/platform-tools
 
 Extract the file and make sure to add it to environment PATH
 
-Selenium Drivers
-
-```
-Download Chrome,IE,Edge and Firefox selenium webdrivers 
-```
-
-Add their location to environment PATH
-
 ### Installing
 
 Verify all tools are working fine
@@ -54,59 +46,80 @@ Open CMD and type adb
 
 ```
 
-Selenium WebDrivers
+Connect device using USB to the system under test and ensure RSA Encryption is accepted
 
-```
-Open CMD and type 
-1. chromedriver
-2. InternetExplorerDriver
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+[IMAGE]
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+1. Open the CMD prompt
+2. Traverse to the Automation folder
+3. Trigger the Execution
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
+dotnet test
 
 ```
-Give an example
+
+[IMAGE]
+
+### What are the tests
+
+There are three types of smoke test to ilustrate the flexibility of the framework
+
+The execution of the test is based on the parameters passed in DataRow property
+
+#### Cross Browser Testing
+
+```
+1. AddCart_OnBrowsers
+
+Runs on browser mode with full resolution (using Selenium)
 ```
 
-## Deployment
+```
 
-Add additional notes about how to deploy this on a live system
+#### Emulator Testing
+2. AddCart_OnEmulators
+
+Runs on browser mode with full resolution (using chrome mobile emulation + Selenium)
+```
+
+```
+
+#### Real Device Testing
+3. AddCart_OnRealDevices
+
+Runs on specified browser on a real device(using Appium)
+```
+
+## Flexibility
+
+1. The framework can be extended to run applitools to perform visual regression testing for the application on different screen sizes & devices
+2. The framework could also be extended to run the test against the Selenium grid
+3. External reports can be integrated to provide a more detailed output of test result against different parameters passed in the test
+(Sample report is placed in Reports folder)
+
+##Future ToDo
+
+1. Minimize the wrappers for drivers by combining both appium and selenium under one 
+2. Enable parallel run to get faster feedback
+3. Applitools integration
+
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* C#
+* [Selenium Webdriver](https://maven.apache.org/) - Dependency Management
+* [Appium](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Anantha Krishnan** - *Initial work* - [PurpleBooth](https://github.com/AKat47)
 
 ## License
 
@@ -114,6 +127,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Inspiration from Open Source Community!!
+
+

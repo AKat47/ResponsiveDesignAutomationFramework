@@ -1,4 +1,4 @@
-﻿using Entities.Pages.Redmart;
+﻿using Entities.Pages.Amazon;
 using OpenQA.Selenium;
 
 namespace Entities.Helper.Desktop
