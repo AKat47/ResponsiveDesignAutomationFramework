@@ -4,7 +4,7 @@ Automation framework which provides flexibility to run a test against any screen
 
 Utilizes both Selenium and Appium driver to provide different flavors to the test
 
-[![ADB](images/Responsivedesign.JPG)]
+[![ADB](images/Responsivedesign.jpg)]
 
 ## Getting Started
 
@@ -22,7 +22,9 @@ git clone https://github.com/AKat47/ResponsiveDesignAutomationFramework.git
 
 3) Android devices (with developer mode enabled)
 
-4) Appium Server
+4) Download Selenium drivers for all browsers
+
+5) Appium Server
 
 ```
 https://github.com/appium/appium-desktop
@@ -38,7 +40,9 @@ Extract the file and make sure to add it to environment PATH
 
 ### Installation
 
-Verify all tools are working fine
+1)Add all drivers path to Environment PATH
+
+2)Verify all tools are working fine
 
 Android SDK Tools
 

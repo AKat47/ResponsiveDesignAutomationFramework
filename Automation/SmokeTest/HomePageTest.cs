@@ -35,7 +35,7 @@ namespace Automation
         [DataRow(BrowserName.Chrome, "HT71S1632212", true)]
         public void AddCart_OnRealDevices(string browserName, string deviceName, bool realDevice)
         {
-            InititializeConfig(browserName);
+            InititializeConfig(browserName,deviceName,realDevice);
             Page.homePage.Navigate();
             Page.homePageHelper.AddToCart(productName, itemName);
         }
