@@ -43,6 +43,7 @@ namespace Automation
         [TestCleanup]
         public void cleanup()
         {
+            Console.WriteLine("Calling screenshot");
             if ((TestContext.CurrentTestOutcome != UnitTestOutcome.Passed))
             {
                 DriverManager.Instance.TakeFailureScreenshot();

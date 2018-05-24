@@ -7,6 +7,9 @@ namespace Automation
     [TestClass]
     public class SmokeTest : TestBase
     {
+        private string productName = "Milk";
+        private string itemName= "Horizon Organic, Lowfat Organic Milk Box, Strawberry";
+
         [DataTestMethod]
         [DataRow(BrowserName.Chrome)]
         [DataRow(BrowserName.Firefox)]
@@ -16,8 +19,7 @@ namespace Automation
         {
             InititializeConfig(browserName);
             Page.homePage.Navigate();
-            Page.homePage.SearchBox.Click();
-            Page.homePageHelper.SearchItem("Milk");
+            Page.homePageHelper.AddToCart(productName, itemName);
         }
 
         [DataTestMethod]
@@ -26,18 +28,16 @@ namespace Automation
         {
             InititializeConfig(browserName,deviceName,realDevice);
             Page.homePage.Navigate();
-            Page.homePage.SearchBox.Click();
-            Page.homePageHelper.SearchItem("Milk");
+            Page.homePageHelper.AddToCart(productName,itemName);
         }
 
         [DataTestMethod]
         [DataRow(BrowserName.Chrome, "HT71S1632212", true)]
         public void AddCart_OnRealDevices(string browserName, string deviceName, bool realDevice)
         {
-            InititializeConfig(browserName, deviceName, realDevice);
+            InititializeConfig(browserName);
             Page.homePage.Navigate();
-            Page.homePage.SearchBox.Click();
-            Page.homePageHelper.SearchItem("Milk");
+            Page.homePageHelper.AddToCart(productName, itemName);
         }
 
     }
